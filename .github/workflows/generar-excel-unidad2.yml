@@ -1,0 +1,29 @@
+name: Generar Excel Unidad 2
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Generar archivo resuelto
+        run: node solve_practica_unidad2_20.js
+
+      - name: Subir artefacto Excel
+        uses: actions/upload-artifact@v4
+        with:
+          name: Practica_Unidad_2_20_ejercicios_RESUELTO
+          path: UNIDAD 2/Practica_Unidad_2_20_ejercicios_RESUELTO.xlsx
+          if-no-files-found: error
