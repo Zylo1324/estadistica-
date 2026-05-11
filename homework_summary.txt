@@ -1,0 +1,54 @@
+Sheets in the file: ['Actividad', 'MATRIZ', 'MAS', 'MS']
+
+--- Sheet: Actividad ---
+                                                                                                                                                                                                                                                           Unnamed: 1                                                                                                      Unnamed: 2
+0                                                                                                                                                                                                                                 Actividad: Selección de una muestra                                                                                                             NaN
+1                                                                                                                                               1. Calcula el tamaño de muestra para la estimación del impuesto promedio de las MYPES mostradas en la MATRIZ de datos                                                                                                             NaN
+2                                                                                                                                                                                                                                                                 NaN  Considere un nivel de confianza del 92%, una varianza poblacional de 122500 y un margen de error de 100 soles 
+3                                                                                                                         2. Calcula el tamaño de muestra para la estimación de la proporción de empresas que se encuentran de acuerdo con un nuevo rubro de impuesto                                                                                                             NaN
+4                                                                                                                                                                                                                                                                 NaN                                 Considere un nivel de confianza del 90%, P = 0.85 y un margen de error de 0.08 
+5       3. Extraer una muestra aleatoria simple de MYPES, para la estimación del impuesto promedio y la proporción de empresas que esán de acuerdo con el impuesto nuevo, teniendo en cuenta los tamaños de muestra encontrados en la pregunta 1. y en la pregunta 2.                                                                                                             NaN
+6  4. Extraer una muestra aleatoria sistemática de MYPES, para la estimación del impuesto promedio y la proporción de empresas que esán de acuerdo con el impuesto nuevo, teniendo en cuenta los tamaños de muestra encontrados en la pregunta 1. y en la pregunta 2.                                                                                                             NaN
+
+--- Sheet: MATRIZ ---
+    Id                         RAZÓN SOCIAL  SECTOR                                 Unnamed: 4 Unnamed: 5
+0    1             CONISLLA QUISPE EPIFANIO       2                                        NaN        NaN
+1    2     MENDOZA MONTAÑEZ TEOBALDO CARLOS       2                                        NaN        NaN
+2    3         CHAPOÑAN RODRIGUEZ JOSE LUIS       1                                        NaN        NaN
+3    4       VILLA CRISOSTOMO IRMA VICTORIA       1                                     Sector     Código
+4    5  CAMPOS SALINAS DE LAM JESSICA JANET       1                                   Comercio          1
+5    6                   LT BABY STORE EIRL       1                      Producción/Extracción          2
+6    7      ATAUPILLCO OROS BRISSI MASSHIEL       6                  Actividades Inmoviliarias          3
+7    8               PAJUELO LIJARZA DONATO       1                     Hoteles y restaurantes          4
+8    9                    ROCCO FILTRO EIRL       1  Transporte, almacenamiento y comunicación          5
+9   10                 CHOQUE QUISPE YANETH       4             Otras actividades de servicios          6
+10  11                 GIANKARS MOTORS EIRL       1                                        NaN        NaN
+11  12                  ICHUTA PALLE SAMUEL       1                                        NaN        NaN
+12  13                            DUBONP SA       1                                        NaN        NaN
+13  14                   MAYTA TITO MELITON       3                                        NaN        NaN
+14  15           COMERCIAL GRAFICA JARA SRL       2                                        NaN        NaN
+15  16                  TENORIO MORENO NORA       4                                        NaN        NaN
+16  17                      ORTHOMEDIC EIRL       2                                        NaN        NaN
+17  18               MAMANI VARGAS HUMBERTO       1                                        NaN        NaN
+18  19       RANILLA FERNANDEZ ELIN LORENZO       3                                        NaN        NaN
+19  20       HD IMPORTACIONES AREQUIPA EIRL       1                                        NaN        NaN
+20  21     CUYOTUPAC VELIZ DEISSY HORTENSIA       1                                        NaN        NaN
+21  22      INVERSIONES YAROSUBE MATEO EIRL       1                                        NaN        NaN
+22  23                         ALINORTE SAC       1                                        NaN        NaN
+23  24                      EMPRESA GUO SAC       4                                        NaN        NaN
+24  25                      OMMIANAVAL EIRL       6                                        NaN        NaN
+25  26                 ASOCIADOS GADIEL SRL       1                                        NaN        NaN
+26  27                      PRO & FAMM EIRL       2                                        NaN        NaN
+27  28                  EL KIKIRIPOLLO EIRL       4                                        NaN        NaN
+28  29                       COPY DATA EIRL       3                                        NaN        NaN
+29  30  CHUQUI DAGA DE CHAVEZ AMELIA ALICIA       1                                        NaN        NaN
+
+--- Sheet: MAS ---
+Empty DataFrame
+Columns: []
+Index: []
+
+--- Sheet: MS ---
+Empty DataFrame
+Columns: []
+Index: []

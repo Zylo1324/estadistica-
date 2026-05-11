@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolución de Tarea - Estadística Inferencial</title>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        :root {
+            --primary-font: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            font-family: var(--primary-font);
+            margin: 0;
+            padding: 0;
+            background-color: #e6e6e6; 
+            color: #000; 
+            line-height: 1.45;
+        }
+
+        /* En pantalla seguiremos viendo hojas individuales bien ordenadas */
+        .page {
+            max-width: 21cm;
+            padding: 2cm 2.5cm;
+            margin: 2cm auto; 
+            background: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            position: relative;
+            box-sizing: border-box;
+            /* SE ELIMINÓ TODO TIPO DE CORTE FORZADO */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 14pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 0; 
+            margin-bottom: 20px;
+        }
+
+        h2, h3 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        p, li {
+            font-size: 11.5pt;
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        .math-block {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 11.5pt;
+            overflow-x: auto;
+        }
+
+        .case-header {
+            padding: 12px;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+
+        .solution-box {
+            margin-top: 5px;
+            padding-left: 10px;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        /* Botón de exportación */
+        .export-btn-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .export-btn {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 12pt;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* IMPRESIÓN MODO FLUIDO PERFECTO ("TODO SEGUIDO") */
+        @media print {
+            @page { 
+                margin: 2cm 2.5cm; /* Los márgenes los pone la hoja física de la impresora */
+            }
+            body { 
+                background: none; 
+            }
+            .page { 
+                margin: 0; 
+                padding: 0; /* Las hojas virtuales se vuelven invisibles, uniendo el texto sin espacios blancos */
+                box-shadow: none; 
+                border: none; 
+            }
+            .export-btn-container { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="export-btn-container">
+        <button class="export-btn" onclick="window.print()">Exportar documento como PDF</button>
+    </div>
+
+    <!-- PÁGINA 1 -->
+    <div class="page">
+        <h1>Optimización de la Inversión en el Sector Agrario</h1>
+
+        <div class="case-header">
+            <p><span class="bold">Caso:</span> Usted ha sido contratado por el Ministerio de Desarrollo Agrario para diseñar la ficha técnica de una encuesta regional. El objetivo es diagnosticar la situación de los productores de café en una zona de alta productividad que cuenta con 12,500 productores registrados. Los resultados determinarán la cuantía de los fondos de apoyo para el próximo año. Se le solicita calcular los tamaños de muestra necesarios para dos indicadores críticos, considerando que el presupuesto para el trabajo de campo es limitado y cada encuesta aplicada cuesta $25.00.</p>
+        </div>
+
+        <h2>Tarea 1: Estimación de la Tasa de Acceso al Crédito</h2>
+        <p>El Ministerio necesita saber qué proporción de productores tiene deudas con la banca formal para diseñar un programa de refinanciamiento.<br>
+        <span class="bold">Información disponible:</span> Un estudio piloto indica que aproximadamente el 35% de los productores tiene crédito activo.<br>
+        <span class="bold">Requerimiento:</span> Trabaje con un Nivel de Confianza del 95% y un Margen de Error del 4%.</p>
+
+        <p class="bold" style="margin-top: 20px;">a) Calcule el tamaño de muestra necesario considerando que la población es finita (N = 12,500)</p>
+
+        <div class="solution-box">
+            <p><span class="bold">Solución a):</span></p>
+            <ul style="margin-top: 0;">
+                <li><span class="bold">Población (<i>N</i>):</span> 12,500</li>
+                <li><span class="bold">Proporción esperada (<i>p</i>):</span> 0.35</li>
+                <li><span class="bold">Probabilidad de fracaso (<i>q</i>):</span> 0.65</li>
+                <li><span class="bold">Confianza (NC):</span> 95%, cuyo valor <i>Z</i> es 1.96</li>
+                <li><span class="bold">Error (<i>e</i>):</span> 0.04 (4%)</li>
+            </ul>
+
+            <p>Para la estimación de una proporción en población finita, aplicamos:</p>
+            <div class="math-block">
+                $$n = \frac{N \cdot Z^2 \cdot p \cdot q}{(N-1) \cdot e^2 + Z^2 \cdot p \cdot q}$$
+            </div>
+
+            <p>Sustituimos e identificamos numerador y denominador:</p>
+            <div class="math-block">
+                $$n = \frac{12500 \cdot (1.96)^2 \cdot 0.35 \cdot 0.65}{(12499) \cdot (0.04)^2 + (1.96)^2 \cdot 0.35 \cdot 0.65}$$
+                $$n = \frac{10,924.55}{19.9984 + 0.873964} = \frac{10,924.55}{20.872364} = 523.40$$
+            </div>
+
+            <p><i>El resultado debe redondearse al entero superior tratándose de individuos.</i></p>
+            <p><span class="bold">Respuesta:</span> El tamaño de muestra necesario es de <span class="bold">524 encuestas</span>.</p>
+        </div>
+    </div>
+
+    <!-- PÁGINA 2 -->
+    <div class="page">
+        <p class="bold">b) ¿Cuál sería el costo total de la recolección de datos para este indicador?</p>
+
+        <div class="solution-box">
+            <p><span class="bold">Solución b):</span><br>
+            Costo Total = 524 encuestas &times; $25.00 = $13,100.00</p>
+            
+            <p><span class="bold">Respuesta:</span> El costo total será de <span class="bold">$13,100.00</span>.</p>
+        </div>
+
+        <h2>Tarea 2: Estimación del Ingreso Promedio Mensual</h2>
+        <p>Para calcular el impacto del subsidio, se requiere conocer el ingreso neto promedio mensual por hectárea.<br>
+        <span class="bold">Información disponible:</span> En el censo agropecuario anterior, la desviación estándar del ingreso en esta zona fue de $180<br>
+        <span class="bold">Requerimiento:</span> El Ministro solicita una precisión alta: Nivel de Confianza del 99% y un Error Máximo admisible de $15.</p>
+
+        <p class="bold" style="margin-top: 20px;">c) Calcule el tamaño de muestra requerido.</p>
+
+        <div class="solution-box">
+            <p><span class="bold">Solución c):</span></p>
+            <ul style="margin-top: 0;">
+                <li><span class="bold">Población (<i>N</i>):</span> 12,500</li>
+                <li><span class="bold">Desviación Estándar (<i>&sigma;</i>):</span> $180</li>
+                <li><span class="bold">Confianza (NC):</span> 99%, cuyo valor <i>Z</i> es 2.576</li>
+                <li><span class="bold">Error Máximo (<i>E</i>):</span> $15</li>
+            </ul>
+
+            <p>Para estimar una media poblacional (población finita), se utiliza la siguiente fórmula:</p>
+            <div class="math-block">
+                $$n = \frac{N \cdot Z^2 \cdot \sigma^2}{(N-1) \cdot E^2 + Z^2 \cdot \sigma^2}$$
+            </div>
+
+            <p>Sustituimos los valores pertinentes y calculamos:</p>
+            <div class="math-block">
+                $$n = \frac{12500 \cdot (2.576)^2 \cdot (180)^2}{(12499) \cdot (15)^2 + (2.576)^2 \cdot (180)^2}$$
+                $$n = \frac{2,687,489,280}{12499 \cdot 225 + 6.6358 \cdot 32400}$$
+                $$n = \frac{2,687,489,280}{2,812,275 + 214,999.14} = \frac{2,687,489,280}{3,027,274.14} = 887.76$$
+            </div>
+            
+            <p><span class="bold">Respuesta:</span> Redondeando al entero superior, el tamaño de muestra es de <span class="bold">888 encuestas</span>.</p>
+        </div>
+    </div>
+
+    <!-- PÁGINA 3 -->
+    <div class="page">
+        <p class="bold">d) Si el presupuesto máximo asignado para este estudio es de $15,000, ¿es viable realizar esta investigación con los parámetros exigidos? Justifique su respuesta con el cálculo del costo.</p>
+
+        <div class="solution-box">
+            <p><span class="bold">Solución d):</span><br>
+            Calculamos el costo proyectado de realizar las 888 encuestas frente al presupuesto de inversión.</p>
+            <div class="math-block">
+                $$\text{Costo Proyectado} = 888 \text{ encuestas} \times \$25.00 = \$22,200.00$$
+            </div>
+            
+            <p><span class="bold">Respuesta:</span> <span class="bold">La investigación no es viable</span>. El proyecto requiere una inversión de $22,200.00, superando el límite del presupuesto de $15,000.00 por una diferencia de $7,200.00. El Ministerio tendría que flexibilizar los parámetros.</p>
+        </div>
+
+        <h2>Tarea 3: Análisis de Sensibilidad y Criterio Económico</h2>
+        <p>Como experto, usted nota que los costos están excediendo el presupuesto inicial:</p>
+
+        <p class="bold" style="margin-top: 20px;">e) Si se decide reducir el Nivel de Confianza de la Tarea 2 del 99% al 95%, ¿cuántas encuestas se ahorraría el Ministerio y cuánto dinero representaría ese ahorro?</p>
+
+        <div class="solution-box">
+            <p><span class="bold">Solución e):</span><br>
+            Para un 95% de confianza, el nuevo <i>Z = 1.96</i>. Recalculamos el tamaño de muestra para la Tarea 2:</p>
+            
+            <div class="math-block">
+                $$n_{nuevo} = \frac{12500 \cdot (1.96)^2 \cdot (180)^2}{12499 \cdot (15)^2 + (1.96)^2 \cdot (180)^2}$$
+                $$n_{nuevo} = \frac{1,555,848,000}{2,812,275 + 124,467.84} = \frac{1,555,848,000}{2,936,742.84} = 529.78$$
+            </div>
+
+            <p>El nuevo requerimiento de muestra bajaría a <span class="bold">530 encuestas</span>.</p>
+
+            <ul style="margin-top: 0;">
+                <li><span class="bold">Ahorro en encuestas:</span> 888 (original) - 530 (nueva) = <span class="bold">358 encuestas ahorradas</span>.</li>
+                <li><span class="bold">Ahorro monetario:</span> 358 encuestas &times; $25.00 = <span class="bold">$8,950.00 de ahorro</span>.</li>
+            </ul>
+            <p><i>Nota: Con la optimización, el nuevo costo ($13,250) logra un cierre compatible al presupuesto inicial.</i></p>
+        </div>
+    </div>
+
+    <!-- PÁGINA 4 -->
+    <div class="page">
+        <p class="bold">f) Si no se tuviera el dato del 35% de acceso al crédito en la Tarea 1 y tuviera que asumir máxima variabilidad, ¿en qué porcentaje aumentaría el tamaño de la muestra respecto al cálculo original?</p>
+
+        <div class="solution-box">
+            <p><span class="bold">Solución f):</span><br>
+            Asumir "máxima variabilidad" cuando carecemos de proporciones previas implica utilizar la mayor varianza posible, lo que ocurre cuando <span class="bold"><i>p = 0.5</i></span> y <span class="bold"><i>q = 0.5</i></span>. Recalculamos la Tarea 1:</p>
+
+            <div class="math-block">
+                $$n_{max} = \frac{12500 \cdot (1.96)^2 \cdot 0.5 \cdot 0.5}{(12499) \cdot (0.04)^2 + (1.96)^2 \cdot 0.5 \cdot 0.5}$$
+                $$n_{max} = \frac{12,005}{19.9984 + 0.9604} = \frac{12,005}{20.9588} = 572.79$$
+            </div>
+
+            <p>El requerimiento muestral incrementaría a <span class="bold">573 encuestas</span>.</p>
+
+            <p>Incremento absoluto: 573 - 524 = 49 encuestas extra.</p>
+            <div class="math-block" style="margin-bottom: 5px;">
+                $$\text{Variación porcentual} = \left(\frac{49}{524}\right) \times 100\% = 9.35\%$$
+            </div>
+
+            <p><span class="bold">Respuesta:</span> El costo estadístico en el tamaño de muestra sufriría un aumento de un <span class="bold">9.35% extra</span> respecto al diseño inicial, debido a la incertidumbre total.</p>
+        </div>
+    </div>
+
+</body>
+</html>

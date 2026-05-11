@@ -1,0 +1,66 @@
+Necesito que edites directamente mi archivo Word (.docx) y lo dejes con este formato exacto.
+
+OBJETIVO
+- Mantén los mismos enunciados del documento original.
+- Resuelve cada ejercicio completo, como si lo hubiera desarrollado una persona.
+- No expliques teoría de forma general si no es necesaria; desarrolla el ejercicio paso a paso y da la respuesta.
+- No cambies el sentido de los enunciados.
+
+FORMATO DEL DOCUMENTO
+- Todo el texto normal debe ir en fuente Times New Roman, tamaño 11.
+- El título principal debe ir en negrita.
+- Cada ejercicio principal debe estar numerado: 1., 2., 3. ... hasta el último.
+- Numera solo los enunciados principales, no los subapartados internos.
+- Debe verse ordenado, limpio y parecido a un trabajo universitario hecho en Word.
+- Conserva el formato de párrafos, sangrías y espacios entre ejercicios para que se vea prolijo.
+USA LS SIMBOLOS DE ESTADISTICA, EJEMPLO x̅ μ σ y mas...
+MUY IMPORTANTE SOBRE LAS ECUACIONES
+- NO dejes fórmulas como texto plano.
+- NO dejes fórmulas tipo LaTeX crudo visible, por ejemplo: \frac{...}{...}.
+- Todas las fórmulas deben insertarse como ecuaciones reales de Word, de forma que al abrir el archivo ya se vean en formato Profesional.
+- Quiero ecuaciones tipo Word profesional, no ecuaciones lineales.
+- Cualquier división debe verse como fracción real, no como texto con “/”.
+- Esto aplica tanto a ecuaciones centradas como a fórmulas dentro de frases.
+
+REGLAS PARA LAS ECUACIONES
+- Si aparece algo como y/x, debe verse como una fracción vertical.
+- Si aparece algo como (Q1 - Q0)/Q0, debe verse como fracción vertical.
+- Si aparece una razón de razones, como elasticidades, debe verse en formato profesional.
+- Si dentro de una oración aparece una fórmula, también debe quedar convertida a ecuación profesional, no solo las líneas centrales.
+- Convierte también fórmulas incrustadas como:
+  - TMS = y/x
+  - y/x = 7/4
+  - 1,5(y/x) = 2
+  - C = (0,8(48)/2 ; 0,2(48)/2)
+  - x = 100/11
+  - U(x,y) = x^0,6 y^0,4
+- Los subíndices deben verse como subíndices reales: Q₁, Q₀, P₁, P₀, Eₚ, Eᵧ, Eₓᵧ, Iₛ, etc.
+- Los exponentes deben verse como exponentes reales.
+- Si una expresión tiene varias divisiones, usa fracciones profesionales y no la dejes lineal.
+
+EJEMPLOS DEL ESTILO DE ECUACIÓN QUE QUIERO
+- E_p = ((Q_1 - Q_0) / Q_0) ÷ ((P_1 - P_0) / P_0)
+  Pero visualmente debe quedar en Word profesional, con fracciones reales.
+- y/x = 7/4
+  Debe verse con ambas fracciones en formato profesional.
+- x = 100/11
+  Debe verse como fracción profesional.
+- U(x,y) = x^0,3 y^0,7
+  Debe verse como ecuación profesional con exponentes.
+
+ESTILO DE DESARROLLO
+- Escribe “Desarrollo:” en negrita.
+- Luego coloca el procedimiento paso a paso.
+- Después coloca “Respuesta:” en negrita.
+- La respuesta final debe ser clara y breve.
+- Usa redacción natural, como de estudiante universitario que sí resolvió el trabajo.
+- No uses lenguaje robótico.
+- No pongas frases innecesarias.
+
+ENTREGA FINAL
+- Devuélveme un archivo Word final listo para abrir.
+- El archivo no debe quedar corrupto.
+- Las ecuaciones deben abrirse ya en formato profesional dentro de Word.
+- Revisa que el archivo final se pueda abrir correctamente.
+- Revisa que las fórmulas no hayan quedado como texto lineal.
+- Revisa que la numeración de ejercicios esté bien.)
